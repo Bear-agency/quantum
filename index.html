@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUANTUM - Académie de trading privée</title>
+    <meta
+      name="description"
+      content="Rejoignez QUANTUM : une académie privée et structurée pour apprendre à lire les marchés et structurer vos décisions."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="page" id="page-root">
+      <header class="topNav">
+        <div class="container navInner">
+          <div class="logo" aria-label="QUANTUM">
+            <img class="logoImage" src="assets/quantum-logo.png" alt="QUANTUM" width="211" height="44" />
+          </div>
+          <nav class="navLinks" aria-label="Navigation principale">
+            <a href="#features">Fonctionnalités</a>
+            <a href="#how">Comment ça fonctionne</a>
+            <a href="#platform">Plateforme</a>
+            <a href="#community">Communauté</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+          <div class="navCta">
+            <button
+              class="mobileToggle"
+              type="button"
+              id="mobile-menu-toggle"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span class="mobile-toggle-label" style="font-weight: 900">☰</span>
+            </button>
+            <button class="headerCtaButton" type="button" data-scroll-to="#final-cta">Rejoindre l'académie</button>
+          </div>
+        </div>
+        <div class="mobileMenu" id="mobile-menu" aria-hidden="true">
+          <div class="container mobileMenuInner">
+            <a href="#features" style="color: #fff; font-weight: 800; padding: 10px 0">Fonctionnalités</a>
+            <a href="#how" style="color: #fff; font-weight: 800; padding: 10px 0">Comment ça fonctionne</a>
+            <a href="#platform" style="color: #fff; font-weight: 800; padding: 10px 0">Plateforme</a>
+            <a href="#community" style="color: #fff; font-weight: 800; padding: 10px 0">Communauté</a>
+            <a href="#faq" style="color: #fff; font-weight: 800; padding: 10px 0">FAQ</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="heroSection">
+        <div class="container heroWrap">
+          <div class="heroContent">
+            <div class="heroLabelWrap reveal" data-reveal="true">
+              <p class="heroLabel">
+                <span>Académie de trading structurée</span>
+              </p>
+            </div>
+            <h1 class="heroTitle" data-reveal="true">
+              Rejoignez une académie privée pour comprendre les marchés et structurer vos décisions
+            </h1>
+            <p class="heroSubtitle" data-reveal="true">
+              Accédez à des sessions live, des débriefings réguliers et une communauté engagée pour développer une
+              lecture claire et disciplinée du marché
+            </p>
+            <div class="heroButtons" data-reveal="true">
+              <button class="ctaButton" type="button" data-scroll-to="#final-cta">Rejoindre l'académie</button>
+              <button class="ghostButton" type="button" data-scroll-to="#how">Voir comment ça fonctionne</button>
+            </div>
+            <p class="trustLine" data-reveal="true">Accès limité — réservé aux membres de l’académie</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Single backdrop for strip + #features so grain/mist aren’t clipped at the section boundary -->
+      <div class="stripFeaturesBackdrop">
+        <section class="featuresStripSection" aria-label="Sessions et débriefs">
+          <div class="container featuresStripInner">
+            <div class="statStrip" data-reveal="true">
+              <div class="stripGrid">
+                <div class="stripCol" data-reveal="true">
+                  <div class="stripTitleRow">
+                    <h3 class="stripTitle">Sessions live encadrées</h3>
+                    <div class="stripIcon" aria-hidden="true">
+                      <img src="assets/strip-block-1.png" alt="" width="48" height="48" decoding="async" />
+                    </div>
+                  </div>
+                  <p class="stripDesc">Des sessions régulières pour analyser le marché en temps réel</p>
+                </div>
+                <div class="stripCol" data-reveal="true">
+                  <div class="stripTitleRow">
+                    <h3 class="stripTitle">Débriefs &amp; replays structurés</h3>
+                    <div class="stripIcon" aria-hidden="true">
+                      <img src="assets/strip-block-2.png" alt="" width="48" height="48" decoding="async" />
+                    </div>
+                  </div>
+                  <p class="stripDesc">Revenez sur les mouvements clés avec une lecture claire et organisée</p>
+                </div>
+                <div class="stripCol" data-reveal="true">
+                  <div class="stripTitleRow">
+                    <h3 class="stripTitle">Intervenants &amp; perspectives</h3>
+                    <div class="stripIcon" aria-hidden="true">
+                      <img src="assets/strip-block-3.png" alt="" width="48" height="48" decoding="async" />
+                    </div>
+                  </div>
+                  <p class="stripDesc">Des sessions avec différents profils pour enrichir votre compréhension</p>
+                </div>
+                <div class="stripCol" data-reveal="true">
+                  <div class="stripTitleRow">
+                    <h3 class="stripTitle">Communauté privée active</h3>
+                    <div class="stripIcon" aria-hidden="true">
+                      <img src="assets/strip-block-4.png" alt="" width="48" height="48" decoding="async" />
+                    </div>
+                  </div>
+                  <p class="stripDesc">Échangez, posez vos questions et confrontez vos idées</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="features">
+        <div class="sectionGlow" aria-hidden="true"></div>
+        <div class="container">
+          <header class="sectionHeader featuresBlockHeader">
+            <h2 class="featuresBlockTitle" data-reveal="true">Une approche plus claire</h2>
+            <p class="featuresBlockSubtitle" data-reveal="true">
+              Un framework premium pour lire le marché et structurer vos décisions, sans flou ni dépendance.
+            </p>
+          </header>
+          <div class="featuresNestedGrid">
+            <article class="card featuresNestedCard reveal" data-reveal="true">
+              <div class="featuresNestedCardText">
+                <h3 class="featuresNestedCardTitle">Une lecture du marché plus claire</h3>
+                <p class="featuresNestedCardDesc">
+                  Filtrez le bruit et concentrez-vous sur les éléments vraiment importants grâce à une approche
+                  structurée
+                </p>
+              </div>
+              <div class="featuresNestedCardFigure">
+                <img
+                  src="assets/feature-nested-cubes.png"
+                  alt=""
+                  width="348"
+                  height="270"
+                  decoding="async"
+                />
+              </div>
+            </article>
+            <article class="card featuresNestedCard reveal" data-reveal="true">
+              <div class="featuresNestedCardText">
+                <h3 class="featuresNestedCardTitle">Un cadre pour structurer vos décisions</h3>
+                <p class="featuresNestedCardDesc">
+                  Appuyez-vous sur des scénarios, des niveaux clés et des débriefings pour éviter les décisions
+                  impulsives
+                </p>
+              </div>
+              <div class="featuresNestedCardFigure">
+                <img
+                  src="assets/feature-nested-bars.png"
+                  alt=""
+                  width="195"
+                  height="270"
+                  decoding="async"
+                />
+              </div>
+            </article>
+            <article class="card featuresNestedCard reveal" data-reveal="true">
+              <div class="featuresNestedCardText">
+                <h3 class="featuresNestedCardTitle">Un rythme régulier pour progresser</h3>
+                <p class="featuresNestedCardDesc">
+                  Sessions live, débriefs et échanges vous permettent de rester aligné avec le marché dans la durée
+                </p>
+              </div>
+              <div class="featuresNestedCardFigure">
+                <img
+                  src="assets/feature-nested-analysis.png"
+                  alt=""
+                  width="223"
+                  height="270"
+                  decoding="async"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+        </section>
+      </div>
+
+      <section class="section howSection" id="how" aria-labelledby="how-heading">
+        <div class="container">
+          <div class="sectionHeader howSectionHeader">
+            <h2 class="sectionTitleBig howSectionTitle" id="how-heading" data-reveal="true">Comment ça fonctionne</h2>
+            <p class="sectionSubtitleBig howSectionSubtitle" data-reveal="true">
+              Un parcours simple et structuré pour passer de l’intuition à une méthode reproductible.
+            </p>
+          </div>
+          <div class="howStepsBlock" data-reveal="true">
+            <div class="stepsGrid howStepsGrid">
+              <div class="card stepCard howStepCard reveal" data-reveal="true">
+                <p class="stepLabel howStepLabel">Étape 1</p>
+                <h3 class="stepTitle howStepTitle">Demande d’accès</h3>
+                <p class="stepDesc howStepDesc">Soumettez votre demande pour rejoindre l’académie</p>
+              </div>
+              <div class="card stepCard howStepCard reveal" data-reveal="true">
+                <p class="stepLabel howStepLabel">Étape 2</p>
+                <h3 class="stepTitle howStepTitle">Introduction &amp; onboarding</h3>
+                <p class="stepDesc howStepDesc">
+                  Découvrez l’environnement, les outils et le fonctionnement
+                </p>
+              </div>
+              <div class="card stepCard howStepCard reveal" data-reveal="true">
+                <p class="stepLabel howStepLabel">Étape 3</p>
+                <h3 class="stepTitle howStepTitle">Accès à la plateforme</h3>
+                <p class="stepDesc howStepDesc">
+                  Participez aux sessions, échangez avec la communauté et progressez à votre rythme
+                </p>
+              </div>
+            </div>
+            <div class="howStepsRail" aria-hidden="true">
+              <div class="howStepsRailTrack">
+                <div class="howStepsRailLine"></div>
+                <div class="howStepsRailMarkers">
+                  <span class="howStepDiamond"></span>
+                  <span class="howStepDiamond"></span>
+                  <span class="howStepDiamond"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section academySection" id="platform" aria-labelledby="platform-heading">
+        <div class="container">
+          <div class="sectionHeader academySectionHeader">
+            <h2 class="sectionTitleBig academySectionTitle" id="platform-heading" data-reveal="true">
+              Ce que vous trouvez dans l’académie
+            </h2>
+            <p class="sectionSubtitleBig academySectionSubtitle" data-reveal="true">
+              Un environnement structuré pour analyser le marché, apprendre et progresser dans la durée
+            </p>
+          </div>
+          <div class="academyGrid" data-reveal="true">
+            <div class="card academyCard reveal" data-reveal="true">
+              <div class="academyIconRound" aria-hidden="true">
+                <img
+                  class="academyIconImg"
+                  src="assets/academy-icon-1-live.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="academyCardTitle">Sessions live d’analyse</h3>
+              <p class="academyCardDesc">Analyse du marché en temps réel avec explications</p>
+            </div>
+            <div class="card academyCard reveal" data-reveal="true">
+              <div class="academyIconRound" aria-hidden="true">
+                <img
+                  class="academyIconImg"
+                  src="assets/academy-icon-2-debrief.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="academyCardTitle">Débriefs des mouvements clés</h3>
+              <p class="academyCardDesc">Comprenez ce qui s’est passé et pourquoi</p>
+            </div>
+            <div class="card academyCard reveal" data-reveal="true">
+              <div class="academyIconRound" aria-hidden="true">
+                <img
+                  class="academyIconImg"
+                  src="assets/academy-icon-3-replay.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="academyCardTitle">Bibliothèque de replays</h3>
+              <p class="academyCardDesc">Accédez aux sessions passées à tout moment</p>
+            </div>
+            <div class="card academyCard reveal" data-reveal="true">
+              <div class="academyIconRound" aria-hidden="true">
+                <img
+                  class="academyIconImg"
+                  src="assets/academy-icon-4-discuss.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="academyCardTitle">Discussions &amp; échanges</h3>
+              <p class="academyCardDesc">Posez vos questions et confrontez vos idées</p>
+            </div>
+            <div class="card academyCard reveal" data-reveal="true">
+              <div class="academyIconRound" aria-hidden="true">
+                <img
+                  class="academyIconImg"
+                  src="assets/academy-icon-5-interventions.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="academyCardTitle">Interventions &amp; perspectives</h3>
+              <p class="academyCardDesc">Sessions avec différents profils et approches</p>
+            </div>
+            <div class="card academyCard reveal" data-reveal="true">
+              <div class="academyIconRound" aria-hidden="true">
+                <img
+                  class="academyIconImg"
+                  src="assets/academy-icon-6-tools.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="academyCardTitle">Outils &amp; supports d’analyse</h3>
+              <p class="academyCardDesc">Des ressources pour structurer votre lecture du marché</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section compareSection" id="community" aria-labelledby="community-heading">
+        <div class="container">
+          <header class="compareSectionHeader">
+            <h2 class="compareSectionTitle" id="community-heading" data-reveal="true">
+              Ce que vous ne trouverez pas ici
+            </h2>
+            <p class="compareSectionSubtitle" data-reveal="true">
+              On vous évite le bruit. Vous gardez le cadre, la clarté et la progression.
+            </p>
+          </header>
+          <div class="compareColumns reveal" data-reveal="true">
+            <div class="compareHeaderRow">
+              <div class="compareHeaderRow__cell compareHeaderRow__cell--negative">
+                <div class="compareColumnHead">
+                  <span class="compareHeadIcon compareHeadIcon--negative" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                      <path d="M18 6 6 18M6 6l12 12" />
+                    </svg>
+                  </span>
+                  <p class="compareColumnLabel">Pas ici</p>
+                </div>
+              </div>
+              <div class="compareHeaderRow__cell compareHeaderRow__cell--positive">
+                <div class="compareColumnHead">
+                  <span class="compareHeadIcon compareHeadIcon--positive" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <p class="compareColumnLabel">Mais ici</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="comparePairRowsStack">
+              <div class="comparePairRowsStack__line" aria-hidden="true"></div>
+
+              <div class="comparePairRow__cell comparePairRow__cell--negative comparePairRow__cell--row1" role="group" aria-label="Comparaison ligne 1">
+                <div class="compareRowCard compareRowCard--negative">
+                  <div class="compareRowIcon compareRowIcon--negative compareRowIcon--negativeFirst" aria-hidden="true">
+                    <img class="compareRowIconImg" src="assets/compare-pas-ici-x.png" alt="" decoding="async" />
+                  </div>
+                  <div class="compareRowBody">
+                    <p class="compareRowTitle">
+                      <span class="compareRowAccent compareRowAccent--negative">Pas de signaux</span>
+                      <span class="compareRowRest"> « à copier »</span>
+                    </p>
+                    <p class="compareRowDesc">Vous ne recevez pas d'instructions toutes faites</p>
+                  </div>
+                </div>
+              </div>
+              <div class="comparePairRow__cell comparePairRow__cell--positive comparePairRow__cell--row1">
+                <div class="compareRowCard compareRowCard--positive">
+                  <div class="compareRowIcon compareRowIcon--positive" aria-hidden="true">
+                    <img
+                      class="compareRowIconImg"
+                      src="assets/compare-mais-ici-chart.png"
+                      alt=""
+                      width="32"
+                      height="32"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="compareRowBody">
+                    <p class="compareRowTitle">
+                      <span class="compareRowAccent compareRowAccent--positive">Une lecture</span>
+                      <span class="compareRowRest"> structurée du marché</span>
+                    </p>
+                    <p class="compareRowDesc">Apprenez à analyser les niveaux, scénarios et contextes</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="comparePairRow__cell comparePairRow__cell--negative comparePairRow__cell--row2" role="group" aria-label="Comparaison ligne 2">
+                <div class="compareRowCard compareRowCard--negative">
+                  <div class="compareRowIcon compareRowIcon--negative" aria-hidden="true">
+                    <img
+                      class="compareRowIconImg"
+                      src="assets/compare-pas-ici-alert.png"
+                      alt=""
+                      width="32"
+                      height="32"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="compareRowBody">
+                    <p class="compareRowTitle">
+                      <span class="compareRowAccent compareRowAccent--negative">Pas de promesses</span>
+                      <span class="compareRowRest"> irréalistes</span>
+                    </p>
+                    <p class="compareRowDesc">Aucune garantie de gains ou de résultats rapides</p>
+                  </div>
+                </div>
+              </div>
+              <div class="comparePairRow__cell comparePairRow__cell--positive comparePairRow__cell--row2">
+                <div class="compareRowCard compareRowCard--positive">
+                  <div class="compareRowIcon compareRowIcon--positive" aria-hidden="true">
+                    <img
+                      class="compareRowIconImg"
+                      src="assets/compare-mais-ici-cap.png"
+                      alt=""
+                      width="32"
+                      height="32"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="compareRowBody">
+                    <p class="compareRowTitle">
+                      <span class="compareRowAccent compareRowAccent--positive">Un cadre</span>
+                      <span class="compareRowRest"> d’apprentissage</span>
+                    </p>
+                    <p class="compareRowDesc">Un environnement conçu pour progresser étape par étape</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="comparePairRow__cell comparePairRow__cell--negative comparePairRow__cell--row3" role="group" aria-label="Comparaison ligne 3">
+                <div class="compareRowCard compareRowCard--negative">
+                  <div class="compareRowIcon compareRowIcon--negative" aria-hidden="true">
+                    <img
+                      class="compareRowIconImg"
+                      src="assets/compare-pas-ici-link.png"
+                      alt=""
+                      width="32"
+                      height="32"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="compareRowBody">
+                    <p class="compareRowTitle">
+                      <span class="compareRowAccent compareRowAccent--negative">Pas de</span>
+                      <span class="compareRowRest"> dépendance</span>
+                    </p>
+                    <p class="compareRowDesc">L'objectif n'est pas de suivre, mais de comprendre</p>
+                  </div>
+                </div>
+              </div>
+              <div class="comparePairRow__cell comparePairRow__cell--positive comparePairRow__cell--row3">
+                <div class="compareRowCard compareRowCard--positive">
+                  <div class="compareRowIcon compareRowIcon--positive" aria-hidden="true">
+                    <img
+                      class="compareRowIconImg"
+                      src="assets/compare-mais-ici-brain.png"
+                      alt=""
+                      width="32"
+                      height="32"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="compareRowBody">
+                    <p class="compareRowTitle">
+                      <span class="compareRowAccent compareRowAccent--positive">Une approche</span>
+                      <span class="compareRowRest"> autonome</span>
+                    </p>
+                    <p class="compareRowDesc">Développez votre propre compréhension du marché</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="stats-testimonials">
+        <div class="container">
+          <div class="statsTestimonialsTop" data-reveal="true">
+            <div class="statsIntro">
+              <h2 class="statsSectionTitle">Une méthode, un rythme, une communauté</h2>
+              <p class="statsSectionSubtitle">
+                Une approche plus claire, plus structurée et plus régulière pour apprendre à lire les marchés dans la
+                durée.
+              </p>
+            </div>
+            <div class="statsBlock" aria-label="Indicateurs">
+              <div class="statsGrid2x2">
+                <div class="statCell">
+                  <img
+                    class="statIconImg"
+                    src="assets/stats-icon-lightbulb.png"
+                    alt=""
+                    width="64"
+                    height="64"
+                    decoding="async"
+                  />
+                  <p class="statCellValue">50+</p>
+                  <p class="statCellLabel">Insights IA quotidiens</p>
+                </div>
+                <div class="statCell">
+                  <img
+                    class="statIconImg"
+                    src="assets/stats-icon-chat.png"
+                    alt=""
+                    width="64"
+                    height="64"
+                    decoding="async"
+                  />
+                  <p class="statCellValue">12,000+</p>
+                  <p class="statCellLabel">Discussions sur les marchés</p>
+                </div>
+                <div class="statCell">
+                  <img
+                    class="statIconImg"
+                    src="assets/stats-icon-people.png"
+                    alt=""
+                    width="64"
+                    height="64"
+                    decoding="async"
+                  />
+                  <p class="statCellValue">3,000+</p>
+                  <p class="statCellLabel">Membres actifs</p>
+                </div>
+                <div class="statCell">
+                  <img
+                    class="statIconImg"
+                    src="assets/stats-icon-monitor.png"
+                    alt=""
+                    width="64"
+                    height="64"
+                    decoding="async"
+                  />
+                  <p class="statCellValue">24/7</p>
+                  <p class="statCellLabel">Suivi des marchés</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonialsWrap">
+            <div class="testimonialsRow" id="testimonials-row"></div>
+            <div class="testimonialNav" role="group" aria-label="Navigation témoignages">
+              <button class="testimonialNavBtn" type="button" id="testimonial-prev" aria-label="Témoignages précédents">←</button>
+              <button class="testimonialNavBtn" type="button" id="testimonial-next" aria-label="Témoignages suivants">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="sectionHeader">
+            <h2 class="sectionTitleBig" data-reveal="true">Questions fréquentes</h2>
+            <p class="sectionSubtitleBig" data-reveal="true">
+              Des réponses claires pour savoir si l'académie vous correspond.
+            </p>
+          </div>
+          <div class="faqWrap" data-reveal="true">
+            <div class="card faqItem faqOpen">
+              <button type="button" class="faqButton" aria-expanded="true">
+                <span class="faqQ">Qu'est-ce que QUANTUM ?</span>
+                <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faqPanel">
+                <p class="faqPanelInner">
+                  QUANTUM est une académie privée qui vous apprend à structurer votre lecture du marché : cadres,
+                  critères, sessions live et débriefs.
+                </p>
+              </div>
+            </div>
+            <div class="card faqItem">
+              <button type="button" class="faqButton" aria-expanded="false">
+                <span class="faqQ">Est-ce que je reçois des signaux ?</span>
+                <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faqPanel">
+                <p class="faqPanelInner">
+                  Non. On vous aide à comprendre et justifier vos décisions à partir d'un cadre d'analyse reproductible.
+                </p>
+              </div>
+            </div>
+            <div class="card faqItem">
+              <button type="button" class="faqButton" aria-expanded="false">
+                <span class="faqQ">Comment accéder à l'académie ?</span>
+                <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faqPanel">
+                <p class="faqPanelInner">
+                  Faites une demande d'accès. Après validation, vous recevez un onboarding et une première session de
+                  cadrage.
+                </p>
+              </div>
+            </div>
+            <div class="card faqItem">
+              <button type="button" class="faqButton" aria-expanded="false">
+                <span class="faqQ">À qui s'adresse l'académie ?</span>
+                <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faqPanel">
+                <p class="faqPanelInner">
+                  À celles et ceux qui veulent apprendre un framework de décision et progresser avec un rythme et des
+                  standards clairs.
+                </p>
+              </div>
+            </div>
+            <div class="card faqItem">
+              <button type="button" class="faqButton" aria-expanded="false">
+                <span class="faqQ">Puis-je accéder aux sessions passées ?</span>
+                <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faqPanel">
+                <p class="faqPanelInner">
+                  Oui. Les replays et débriefs restent disponibles pour revoir, comparer et ancrer les apprentissages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="finalCta" id="final-cta">
+        <div class="sectionWrap">
+          <img
+            class="finalCtaDecor finalCtaDecor--left"
+            src="assets/final-cta-decor-left.png"
+            alt=""
+            width="177"
+            height="221"
+            decoding="async"
+            aria-hidden="true"
+          />
+          <img
+            class="finalCtaDecor finalCtaDecor--right"
+            src="assets/final-cta-decor-right.png"
+            alt=""
+            width="178"
+            height="205"
+            decoding="async"
+            aria-hidden="true"
+          />
+          <div class="container finalCtaWrap">
+            <div class="finalCtaBlock">
+              <h2 class="finalTitle" data-reveal="true">
+                Commencez à structurer votre lecture du marché dès aujourd’hui
+              </h2>
+              <p class="finalSubtitle" data-reveal="true">
+                Accédez à des sessions régulières, des analyses claires et une communauté active pour progresser dans la
+                durée
+              </p>
+              <div class="finalCtaActions" data-reveal="true">
+                <button class="finalCtaButton" type="button" id="final-cta-btn">Demander un accès</button>
+              </div>
+              <p class="finalCtaNote" data-reveal="true">Accès anticipé pour traders et analystes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footerInner">
+            <div class="footerBrand">
+              <p class="footerWordmark">QUANTUM</p>
+              <p class="footerTagline">
+                Plateforme d&apos;analyse de marché assistée par intelligence artificielle et communauté privée de
+                traders
+              </p>
+            </div>
+            <nav class="footerNav" aria-label="Liens de pied de page">
+              <a href="#features">Fonctionnalités</a>
+              <a href="#how">Comment ça fonctionne</a>
+              <a href="#platform">Plateforme</a>
+              <a href="#community">Communauté</a>
+              <a href="#faq">FAQ</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
