@@ -34,29 +34,62 @@
 
   var mobileMenuEl = null;
   var mobileToggleEl = null;
+  var topNavEl = null;
+  var mobileMenuBreakpoint = 900;
 
   function closeMobileMenu() {
     if (!mobileMenuEl || !mobileToggleEl) return;
     mobileMenuEl.classList.remove("is-open");
     mobileMenuEl.setAttribute("aria-hidden", "true");
     mobileToggleEl.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("mobile-menu-open");
+    if (topNavEl) topNavEl.classList.remove("mobile-open");
+    var label = mobileToggleEl.querySelector(".mobile-toggle-label");
+    if (label) label.textContent = "☰";
   }
 
   function initMobileMenu() {
     mobileMenuEl = document.getElementById("mobile-menu");
     mobileToggleEl = document.getElementById("mobile-menu-toggle");
+    topNavEl = document.querySelector(".topNav");
     if (!mobileMenuEl || !mobileToggleEl) return;
 
     mobileToggleEl.addEventListener("click", function () {
       var open = mobileMenuEl.classList.toggle("is-open");
       mobileMenuEl.setAttribute("aria-hidden", open ? "false" : "true");
       mobileToggleEl.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.classList.toggle("mobile-menu-open", open);
+      if (topNavEl) topNavEl.classList.toggle("mobile-open", open);
       var label = mobileToggleEl.querySelector(".mobile-toggle-label");
-      if (label) label.textContent = open ? "✕" : "☰";
+      if (label) label.textContent = open ? "X" : "☰";
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 640) closeMobileMenu();
+      if (window.innerWidth > mobileMenuBreakpoint) closeMobileMenu();
+    });
+  }
+
+  function prefersReducedMotion() {
+    return (
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    );
+  }
+
+  /** Stagger scroll-reveal delays among siblings (same parent) for a cascading effect */
+  function initRevealStagger(root) {
+    if (prefersReducedMotion()) return;
+    var parents = new Set();
+    root.querySelectorAll("[data-reveal='true']").forEach(function (el) {
+      if (el.parentElement) parents.add(el.parentElement);
+    });
+    parents.forEach(function (parent) {
+      var staggered = Array.prototype.filter.call(parent.children, function (node) {
+        return node.getAttribute("data-reveal") === "true";
+      });
+      staggered.forEach(function (node, i) {
+        node.style.setProperty("--reveal-delay", Math.min(i, 12) * 58 + "ms");
+      });
     });
   }
 
@@ -66,6 +99,8 @@
 
     var items = root.querySelectorAll("[data-reveal='true']");
     if (!items.length) return;
+
+    initRevealStagger(root);
 
     items.forEach(function (el) {
       el.classList.add("reveal");
@@ -78,7 +113,7 @@
           entry.target.classList.add("revealVisible");
         });
       },
-      { threshold: 0.14 }
+      { threshold: 0.12, rootMargin: "0px 0px -5% 0px" }
     );
 
     items.forEach(function (el) {
@@ -147,10 +182,12 @@
     }
 
     row.innerHTML = "";
-    slice.forEach(function (t) {
+    slice.forEach(function (t, idx) {
       var article = document.createElement("article");
-      article.className = "card testimonialCard reveal revealVisible";
-      article.setAttribute("data-reveal", "true");
+      article.className = "card testimonialCard testimonialCard--enter";
+      if (!prefersReducedMotion()) {
+        article.style.animationDelay = idx * 0.075 + "s";
+      }
       var avatarSrc = t.avatar ? escapeHtml(t.avatar) : "";
       var subtitleHtml = t.subtitle
         ? '<p class="testimonialSubtitle">' + escapeHtml(t.subtitle) + "</p>"

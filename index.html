@@ -45,11 +45,16 @@
         </div>
         <div class="mobileMenu" id="mobile-menu" aria-hidden="true">
           <div class="container mobileMenuInner">
-            <a href="#features" style="color: #fff; font-weight: 800; padding: 10px 0">Fonctionnalités</a>
-            <a href="#how" style="color: #fff; font-weight: 800; padding: 10px 0">Comment ça fonctionne</a>
-            <a href="#platform" style="color: #fff; font-weight: 800; padding: 10px 0">Plateforme</a>
-            <a href="#community" style="color: #fff; font-weight: 800; padding: 10px 0">Communauté</a>
-            <a href="#faq" style="color: #fff; font-weight: 800; padding: 10px 0">FAQ</a>
+            <button class="mobileMenuCtaButton" type="button" data-scroll-to="#final-cta">
+              Demander un accès
+            </button>
+            <div class="mobileMenuLinks" aria-label="Menu mobile">
+              <a href="#features">Fonctionnalités</a>
+              <a href="#how">Comment ça fonctionne</a>
+              <a href="#platform">Plateforme</a>
+              <a href="#community">Communauté</a>
+              <a href="#faq">FAQ</a>
+            </div>
           </div>
         </div>
       </header>
@@ -82,43 +87,57 @@
       <div class="stripFeaturesBackdrop">
         <section class="featuresStripSection" aria-label="Sessions et débriefs">
           <div class="container featuresStripInner">
+            <header class="stripSectionIntro" data-reveal="true">
+              <h2 class="stripSectionTitle">Une lecture du marché plus claire, plus rapide et plus structurée</h2>
+              <p class="stripSectionSubtitle">
+                Analyses de marché assistées par l’intelligence artificielle, alertes contextuelles et communauté
+                privée de traders pour mieux comprendre les dynamiques du marché
+              </p>
+            </header>
             <div class="statStrip" data-reveal="true">
               <div class="stripGrid">
                 <div class="stripCol" data-reveal="true">
                   <div class="stripTitleRow">
-                    <h3 class="stripTitle">Sessions live encadrées</h3>
+                    <h3 class="stripTitle">Analyse assistée par IA</h3>
                     <div class="stripIcon" aria-hidden="true">
                       <img src="assets/strip-block-1.png" alt="" width="48" height="48" decoding="async" />
                     </div>
                   </div>
-                  <p class="stripDesc">Des sessions régulières pour analyser le marché en temps réel</p>
+                  <p class="stripDesc">
+                    L’intelligence artificielle aide à filtrer le bruit du marché et à mettre en évidence les signaux
+                    et tendances importants.
+                  </p>
                 </div>
                 <div class="stripCol" data-reveal="true">
                   <div class="stripTitleRow">
-                    <h3 class="stripTitle">Débriefs &amp; replays structurés</h3>
+                    <h3 class="stripTitle">Scénarios de marché et niveaux clés</h3>
                     <div class="stripIcon" aria-hidden="true">
                       <img src="assets/strip-block-2.png" alt="" width="48" height="48" decoding="async" />
                     </div>
                   </div>
-                  <p class="stripDesc">Revenez sur les mouvements clés avec une lecture claire et organisée</p>
+                  <p class="stripDesc">
+                    Des scénarios structurés et des niveaux de prix importants pour soutenir votre analyse.
+                  </p>
                 </div>
                 <div class="stripCol" data-reveal="true">
                   <div class="stripTitleRow">
-                    <h3 class="stripTitle">Intervenants &amp; perspectives</h3>
+                    <h3 class="stripTitle">Communauté privée de traders</h3>
                     <div class="stripIcon" aria-hidden="true">
                       <img src="assets/strip-block-3.png" alt="" width="48" height="48" decoding="async" />
                     </div>
                   </div>
-                  <p class="stripDesc">Des sessions avec différents profils pour enrichir votre compréhension</p>
+                  <p class="stripDesc">Un espace dédié où les traders partagent analyses, idées et contexte de marché.</p>
                 </div>
                 <div class="stripCol" data-reveal="true">
                   <div class="stripTitleRow">
-                    <h3 class="stripTitle">Communauté privée active</h3>
+                    <h3 class="stripTitle">Analyse de marché structurée</h3>
                     <div class="stripIcon" aria-hidden="true">
                       <img src="assets/strip-block-4.png" alt="" width="48" height="48" decoding="async" />
                     </div>
                   </div>
-                  <p class="stripDesc">Échangez, posez vos questions et confrontez vos idées</p>
+                  <p class="stripDesc">
+                    Des insights clairs et organisés pour accélérer votre recherche et votre compréhension des marchés.
+                  </p>
                 </div>
               </div>
             </div>
@@ -145,9 +164,9 @@
               </div>
               <div class="featuresNestedCardFigure">
                 <img
-                  src="assets/feature-nested-cubes.png"
+                  src="assets/third-section-block-1.png"
                   alt=""
-                  width="348"
+                  width="368"
                   height="270"
                   decoding="async"
                 />
@@ -163,9 +182,9 @@
               </div>
               <div class="featuresNestedCardFigure">
                 <img
-                  src="assets/feature-nested-bars.png"
+                  src="assets/third-section-block-2.png"
                   alt=""
-                  width="195"
+                  width="348"
                   height="270"
                   decoding="async"
                 />
@@ -180,9 +199,9 @@
               </div>
               <div class="featuresNestedCardFigure">
                 <img
-                  src="assets/feature-nested-analysis.png"
+                  src="assets/third-section-block-3.png"
                   alt=""
-                  width="223"
+                  width="368"
                   height="270"
                   decoding="async"
                 />
@@ -583,7 +602,7 @@
           <div class="faqWrap" data-reveal="true">
             <div class="card faqItem faqOpen">
               <button type="button" class="faqButton" aria-expanded="true">
-                <span class="faqQ">Qu'est-ce que QUANTUM ?</span>
+                <span class="faqQ">Qu'est-ce que QUANTUM&nbsp;?</span>
                 <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -597,7 +616,7 @@
             </div>
             <div class="card faqItem">
               <button type="button" class="faqButton" aria-expanded="false">
-                <span class="faqQ">Est-ce que je reçois des signaux ?</span>
+                <span class="faqQ">Est-ce que je reçois des signaux&nbsp;?</span>
                 <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -610,7 +629,7 @@
             </div>
             <div class="card faqItem">
               <button type="button" class="faqButton" aria-expanded="false">
-                <span class="faqQ">Comment accéder à l'académie ?</span>
+                <span class="faqQ">Comment accéder à l'académie&nbsp;?</span>
                 <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -624,7 +643,7 @@
             </div>
             <div class="card faqItem">
               <button type="button" class="faqButton" aria-expanded="false">
-                <span class="faqQ">À qui s'adresse l'académie ?</span>
+                <span class="faqQ">À qui s'adresse l'académie&nbsp;?</span>
                 <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -638,7 +657,7 @@
             </div>
             <div class="card faqItem">
               <button type="button" class="faqButton" aria-expanded="false">
-                <span class="faqQ">Puis-je accéder aux sessions passées ?</span>
+                <span class="faqQ">Puis-je accéder aux sessions passées&nbsp;?</span>
                 <svg class="faqChevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M9 10l3 3 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
