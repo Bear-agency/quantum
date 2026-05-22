@@ -281,20 +281,11 @@
     window.addEventListener("resize", syncOpenPanels);
   }
 
-  function initFinalCta() {
-    var btn = document.getElementById("final-cta-btn");
-    if (btn)
-      btn.addEventListener("click", function () {
-        alert("Demande d'accès : formulaire bientôt disponible.");
-      });
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initMobileMenu();
     initReveal();
     initTestimonials();
     initFaq();
-    initFinalCta();
   });
 })();
